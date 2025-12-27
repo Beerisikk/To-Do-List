@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Minimal To Do List</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+
+  <div class="w-full max-w-md bg-white rounded-xl shadow-lg p-6">
+    <h1 class="text-2xl font-semibold text-gray-800 text-center mb-4">
+      To Do List
+    </h1>
+    <p id="todayDate" class="text-center text-sm text-gray-500 mb-4"></p>
+
+    <div class="flex gap-2 mb-4">
+      <input
+        id="todoInput"
+        type="text"
+        placeholder="Tambah tugas..."
+        class="flex-1 border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
+      <button
+        onclick="addTodo()"
+        class="bg-blue-600 text-white px-4 rounded-lg hover:bg-blue-700 transition"
+      >
+        +
+      </button>
+    </div>
+
+    <ul id="todoList" class="space-y-2"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
